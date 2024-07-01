@@ -12,7 +12,7 @@
     "dev": "npx ts-node-dev --respawn --transpileOnly ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
-    "deploy": "npm run build && eb init delta --region us-east-1 && chmod +x bin/deploy.sh && bin/deploy.sh && eb use Delta-env && eb deploy Delta-env",
+    "deploy": "npm run build && eb init demo-app --region us-east-1 && chmod +x bin/deploy.sh && bin/deploy.sh && eb use Demo-app-env && eb deploy Demo-app-env",
     "build": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
