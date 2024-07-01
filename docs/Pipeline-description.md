@@ -21,7 +21,7 @@
 1. **Update the S3 bucket name:** In frontend folder. We will need to edit the **.../bin/deploy.sh script** and add the name of our previously used S3 bucket.
     ```typescript
     # Replace the [linhntd12] below with the S3 bucket name
-    aws s3 cp --recursive --acl public-read ./build s3://[tuyennbucket]/
+    aws s3 cp --recursive --acl public-read ./build s3://[linhntd12]/
     # The trailing / at the end of the URL is important. 
     ```
 2. **Create folder bin in udagram-api** - add new bin folder in udagram folder and create file **deploy.sh**
